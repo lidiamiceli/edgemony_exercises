@@ -1,0 +1,9 @@
+.container {
+  padding: 0 164px;
+}
+.product-content {
+  display: flex;
+  justify-content: center;
+  gap: 108px;
+  padding: 50px 90px;
+}

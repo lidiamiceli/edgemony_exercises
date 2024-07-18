@@ -1,0 +1,77 @@
+:root {
+    --background-color: #1e1e1e;
+    --container-color: #2c2c2c;
+    --button-color: #4caf50;
+    --input-background: #ffffff;
+    --input-text-color: #000000;
+    --text-color: #ffffff;
+    --item-background: #444444;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #313131;
+    min-width: 300px;
+    max-width: 100%;
+    overflow-x: hidden;
+    min-height: 100dvh;
+    margin: 10px;
+  }
+  
+  
+  h1 {
+    color: #1e1e1e;
+    margin-bottom: 20px;
+    font-size: 10px;
+    margin-top: 95px;
+  }
+  
+  
+  form {
+display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  }
+  
+  label {
+    color: var(--text-color);
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px;
+    border: none;
+    background-color: var(--input-background);
+    color: var(--input-text-color);
+    width: 70%;
+    align-items: center;
+  }
+  
+  button {
+  width: 40%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  }
+  
+  button:hover {
+    background-color: #45a0497f;
+    color: whitesmoke;
+  }
+  
+@media (max-width: 768px) {
+  .container {
+    max-width: 100dvh;
+    min-height: 100dvh;
+  }
+}
+  

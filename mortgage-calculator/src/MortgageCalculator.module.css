@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap');
+
+.container {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--neutral-white);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+}
+
+.formContainer {
+  flex: 1;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 1rem;
+  color: var(--neutral-slate-900);
+}
+
+.clearButton {
+  font-size: 14px;
+  color: var(--primary-red);
+  cursor: pointer;
+  border: none;
+  background: none;
+  align-self: flex-start;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--neutral-slate-700);
+  font-size: 400;
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid hsl(203, 41%, 72%);
+  border-radius: 4px;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 1rem;
+}
+
+.radioGroup label {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--neutral-slate-700);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 6px;
+  margin: 10px;
+
+}
+
+.calculateButton {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--primary-lime);
+  color: var(--neutral-slate-900);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 1rem;
+  font-size: 16px;
+}
+
+.resultsContainer {
+  flex: 1;
+  background-color: var(--neutral-slate-900);
+  color: white;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.resultsTitle {
+  font-size: 24px;
+  margin-bottom: 3rem;
+}
+
+.results {
+  background-color: var(--neutral-slate-100);
+  color: var(--neutral-slate-900);
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.monthlyRepayment {
+  font-size: 32px;
+  color: var(--primary-lime);
+  margin: 1rem 0;
+}
+
+.totalRepayment {
+  font-size: 24px;
+  color: var(--primary-red);
+  margin: 1rem 0;
+}
+
+.placeholder {
+  color: var(--neutral-slate-300);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+p{
+    font-size: 400;
+}
