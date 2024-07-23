@@ -1,21 +1,53 @@
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { fetchAlbumDetail } from '../api/albumClient'; 
+import SkeletonLoader from './SkeletonLoader';
+import ErrorComponent from './ErrorComponent';
 
-import React from 'react';
+const AlbumDetail = () => {
+  const { id } = useParams();
+  const [album, setAlbum] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState({ message: "", isError: false });
 
-const AlbumDetail = ({ album, onBack }) => {
+  useEffect(() => {
+    const fetchAndSetAlbum = async () => {
+      setIsLoading(true);
+      setIsError({ message: "", isError: false });
+      try {
+        const data = await fetchAlbumDetail(id);
+        setAlbum(data);
+      } catch (error) {
+        console.error('Errore nella fetch:', error);
+        setIsError({ message: error.message, isError: true });
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchAndSetAlbum();
+  }, [id]);
+
+  if (isError.isError) return <ErrorComponent message={isError.message} />;
+  if (isLoading) return <SkeletonLoader />;
+
   return (
-    <div className="p-4 max-w-md mx-auto">
-      <button onClick={onBack} className="text-blue-500 mb-4">Indietro</button>
-      <h1 className="text-xl mb-3">{album.collectionName}</h1>
-      <img 
-        src={album.artworkUrl100} 
-        alt={album.collectionName} 
-        className="w-full h-32 object-cover rounded-md mb-4" 
-      />
-      <h2 className="text-md mb-2">{album.artistName}</h2>
-      <p className="text-sm mb-1">Genere: {album.primaryGenreName}</p>
-      <p className="text-sm">Data di rilascio: {new Date(album.releaseDate).toLocaleDateString()}</p>
+    <div className="p-6">
+      <h1 className="text-2xl mb-4 text-center">Dettagli Album</h1>
+      {album && (
+        <div className="border p-4 rounded shadow w-64">
+          <img src={album.artworkUrl100} alt={album.collectionName} className="mb-2 w-64 h-auto" />
+          <h2 className="text-xl font-semibold">{album.collectionName}</h2>
+          <p className="text-gray-700">Artista: {album.artistName}</p>
+          <p className="text-gray-700">Genere: {album.primaryGenreName}</p>
+          <p className="text-gray-700">Data di rilascio: {album.releaseDate}</p>
+          <p className="mt-2 text-gray-800">{album.collectionDescription}</p>
+        </div>
+      )}
     </div>
   );
 };
 
 export default AlbumDetail;
+
+
