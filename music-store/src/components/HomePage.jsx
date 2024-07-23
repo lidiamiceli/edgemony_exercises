@@ -11,7 +11,7 @@ const HomePage = () => {
   const [genre, setGenre] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState({ message: "", isError: false });
-  const [searchTerm, setSearchTerm] = useState('rock'); // Default search term
+  const [searchTerm, setSearchTerm] = useState('Rap'); 
 
   useEffect(() => {
     const fetchAndSetAlbums = async () => {
@@ -95,7 +95,7 @@ const HomePage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 m-5">
           {filteredAlbums.length > 0 ? (
             filteredAlbums.map(album => (
-              <div key={album.collectionId} className="border p-4 rounded shadow rounded-md w-full m-5">
+              <div key={album.collectionId} className="border p-4 rounded shadow-2xl rounded-md w-full m-5">
                 <img src={album.artworkUrl100} alt={album.collectionName} className="mb-2 w-full h-auto" />
                 <h2 className="text-xl font-semibold text-black">{album.collectionName}</h2>
                 <p className="text-gray-700">{album.artistName}</p>
@@ -114,6 +114,8 @@ const HomePage = () => {
       )}
     </div>
   );
+
+  
 };
 
 export default HomePage;
