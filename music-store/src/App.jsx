@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import NavBar from './components/NavBar';
 import HomePage from './components/HomePage';
+import AlbumPage from './components/AlbumPage';
 import SettingsPage from './components/SettingsPage';
-import AlbumDetail from './components/AlbumDetail';
-import ErrorPage from './components/ErrorPage';
+import NavBar from './components/NavBar';
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('home');
@@ -14,13 +13,11 @@ const App = () => {
       <NavBar setCurrentPage={setCurrentPage} currentPage={currentPage} />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/albums" element={<AlbumPage />} />
         <Route path="/settings" element={<SettingsPage />} />
-        <Route path="/album/:id" element={<AlbumDetail />} />
-        <Route path="*" element={<ErrorPage />} /> 
       </Routes>
     </Router>
   );
 };
 
 export default App;
-
