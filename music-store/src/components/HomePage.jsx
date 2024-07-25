@@ -59,8 +59,7 @@ const HomePage = () => {
             onChange={(e) => setSearchTerm(e.target.value)}
             className="border p-2 mr-2"
           />
-          <button type="submit" className="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
-            Cerca
+          <button type="submit" className="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">Cerca
           </button>
         </form>
 
@@ -69,8 +68,7 @@ const HomePage = () => {
           placeholder="Filtra per nome album"
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
-          className="border p-2 mr-2 mt-2"
-        />
+          className="border p-2 mr-2 mt-2"/>
 
         <select
           value={genre}
@@ -109,11 +107,8 @@ const HomePage = () => {
                   </p>
                   <Link
                     to={`/album/${album.collectionId}`}
-                    className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600"
-                  >
-                    Vedi Dettagli
-                    <span aria-hidden="true" className="block transition-all group-hover:ms-0.5 rtl:rotate-180">
-                      &rarr;
+                    className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600">Vedi Dettagli
+                    <span aria-hidden="true" className="block transition-all group-hover:ms-0.5 rtl:rotate-180">&rarr;
                     </span>
                   </Link>
                 </div>

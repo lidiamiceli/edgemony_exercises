@@ -1,4 +1,4 @@
-// src/api/albumClient.js
+
 
 export const fetchAlbumDetail = async (id) => {
   try {
@@ -22,7 +22,18 @@ export const fetchAlbums = async (term) => {
   }
 };
 
-// Le seguenti funzioni gestiscono l'archiviazione locale per aggiungere, modificare e eliminare album.
+
+export const fetchAlbumById = async (id) => {
+  try {
+    const response = await fetch(`https://itunes.apple.com/lookup?id=${id}`);
+    const data = await response.json();
+    return data.results[0];
+  } catch (error) {
+    console.error('Errore nella fetch:', error);
+    throw error;
+  }
+};
+
 const localAlbums = [];
 
 export const addAlbum = async (album) => {
@@ -49,4 +60,3 @@ export const deleteAlbum = async (id) => {
 };
 
 export const getLocalAlbums = () => localAlbums;
-
