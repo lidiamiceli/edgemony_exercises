@@ -1,5 +1,6 @@
 import React from 'react';
 import NftCard from './NftCard';
+import './styles/tailwind.css';
 import './index.css';
 
 function App() {
