@@ -22,7 +22,7 @@ function CharacterCounter() {
           rows="5"
           cols="40"
           placeholder="Insert text here..."
-          className="w-full p-2 mb-4 border border-gray-600 rounded"
+          className="w-full p-2 mb-4 border border-gray-600 rounded text-black"
         />
         <br />
         <label className="flex items-center mb-4">
