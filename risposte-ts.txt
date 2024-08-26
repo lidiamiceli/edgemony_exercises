@@ -1,0 +1,16 @@
+1.Quali sono le principali componenti del mini-compilatore che riesci a individuare nel codice? Elencale brevemente.
+
+Le principali componenti del mini-compilatore nel codice sono: il tokenizer, il parser, il traverser, il transformer, il code generator e il compiler.
+
+2.Cos'è e cosa fa la funzione tokenizer? Spiegalo con parole tue.
+
+il tokenizer prende una stringa di codice e la spezza in piccoli pezzi chiamati token come i numeri, le parentesi, i simboli o i nomi delle funzioni e analizza il codice un carattere alla volta, individua questi token e li mette in un elenco, restituisce poi questo elenco, che sarà poi usato dal parser per costruire una rappresentazione più strutturata del codice.
+
+
+3.Perché è fondamentale avere un parser in un compilatore? Quale ruolo svolge?
+
+Il parser è una parte essenziale di un compilatore perché prende i token, che sono i singoli pezzi di codice, e li organizza in una struttura chiamata albero sintattico astratto (AST) che mostra come i diversi elementi del codice si collegano tra loro per formare istruzioni e espressioni. Senza il parser, sarebbe molto difficile capire come i token si combinano e quale significato hanno nel contesto del programma.
+
+4.Se dovessi creare un conta caratteri in JavaScript, quali parti di questo compilatore ti sarebbero utili?
+
+per creare un conta-caratteri utilizzerei il tokenizer perché scorre il codice sorgente carattere per carattere

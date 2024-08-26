@@ -15,26 +15,22 @@ const NavBar = ({ setCurrentPage, currentPage }) => {
           <NavLink
             to="/"
             className={({ isActive }) => getClassName('home') + (isActive ? ' bg-gray-700 text-white' : ' text-white')}
-            onClick={() => setCurrentPage('home')}
-          >
-            Home
-          </NavLink>
+            onClick={() => setCurrentPage('home')}>Home </NavLink>
 
           <NavLink
             to="/albums"
             className={({ isActive }) => getClassName('album') + (isActive ? ' bg-gray-700 text-white' : ' text-white')}
-            onClick={() => setCurrentPage('album')}
-          >
-            Albums
-          </NavLink>
+            onClick={() => setCurrentPage('album')} >Albums </NavLink>
+
+          <NavLink
+            to="/edit"
+            className={({ isActive }) => getClassName('edit') + (isActive ? ' bg-gray-700 text-white' : ' text-white')}
+            onClick={() => setCurrentPage('edit')}> Modifica </NavLink>
 
           <NavLink
             to="/settings"
             className={({ isActive }) => getClassName('settings') + (isActive ? ' bg-gray-700 text-white' : ' text-white')}
-            onClick={() => setCurrentPage('settings')}
-          >
-            Impostazioni
-          </NavLink>
+            onClick={() => setCurrentPage('settings')}> Impostazioni </NavLink>
         </nav>
 
         <div className="flex items-center gap-4">
