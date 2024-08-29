@@ -35,7 +35,7 @@ const Home = ({ initialProducts }: { initialProducts: Product[] }) => {
             productsToShow.map(product => (
               <li key={product.id} className="flex gap-4 p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
                 <Image
-                  src={product.image} // Assicurati che questo URL sia corretto
+                  src={product.image}
                   alt={product.name || 'Product image'}
                   width={150}
                   height={150}
